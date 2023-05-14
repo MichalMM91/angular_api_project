@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <ng-container *ngFor="let c of countries">
+        
+        <div class="row justify-content-center align-items-center g-2 m-2">
+            <div class="col">
+                <div class="card border-primary b-5">
+          
+                    <div class="card-body">
+                      <h2 class="card-title">{{c.name}}</h2>
+                      <h3 class="card-text">capital: {{c.capital}}</h3>
+                    </div>
+                    <img class="card-img-top img-fluid w-50" src={{c.flag}} alt="Title">
+                  </div>
+            </div>
+        </div>
+        
+        
+        
+    </ng-container>
+</div>
