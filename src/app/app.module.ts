@@ -11,18 +11,27 @@ import { FormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
 
+import { CurrentweatherComponent } from './MyComponents/currentweather/currentweather.component';
+import { AboutComponent } from './MyComponents/about/about.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HomeComponent,
-    WeatherinfoComponent
+    WeatherinfoComponent,
+    CurrentweatherComponent,
+    AboutComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

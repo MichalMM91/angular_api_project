@@ -1,1 +1,65 @@
 <p>currentweather works!</p>
+<div class="wrapper">
+    <div class="container">
+        <div class="upper">
+          <img src="../assets/backgr_hi.svg" *ngIf="14 > 25 ">
+          <img src="../assets/backgr_med_hi.svg" *ngIf="14 > 15 AND 14 < 25"> 
+          <img src="../assets/backgr_med_lo.svg" *ngIf="14 > 5 AND 14 < 15 "> 
+          <img src="../assets/backgr_lo.svg" *ngIf="14 > 5 AND 14 < 5 "> 
+          <img src="../assets/backgr_v_lo.svg" *ngIf="14 < -5 "> 
+          
+          <div class="weather-data">
+            <div class="location">
+                Wellington
+
+            </div>
+            <div class="temperature">{{24.40 | number: '1.0-0'}}°C
+            </div>
+        
+       
+            </div>
+        </div>
+        <div class="lower">
+
+            <div class="more-info-label"></div>
+            <div class="more-info-container">
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/min.jpg">
+                        <span>MIN</span>
+                    </div>
+                    <div class="info-block-value">
+                        10°C
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/max.jpg">
+                        <span>MAX</span>
+                    </div>
+                    <div class="info-block-value">
+                        20°C
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/humidity.jpg">
+                        <span>HUMIDITY</span>
+                    </div>
+                    <div class="info-block-value">
+                        70%
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-label">
+                        <img src="../assets/wind.jpg">
+                        <span>min</span>
+                    </div>
+                    <div class="info-block-value">
+                        20 km/h
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
