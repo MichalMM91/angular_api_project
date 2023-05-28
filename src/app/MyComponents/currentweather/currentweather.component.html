@@ -1,4 +1,8 @@
-<p>currentweather works!</p>
+<div class="search">
+    <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="submit">Search</button>
+    </form>
+</div>
 <div class="wrapper">
     <div class="container">
         <div class="upper">
@@ -10,7 +14,7 @@
           
           <div class="weather-data">
             <div class="location">
-                Wellington
+                London
 
             </div>
             <div class="temperature">{{24.40 | number: '1.0-0'}}°C
@@ -47,7 +51,7 @@
                         <span>HUMIDITY</span>
                     </div>
                     <div class="info-block-value">
-                        70%
+                        10%
                     </div>
                 </div>
                 <div class="info-block">
