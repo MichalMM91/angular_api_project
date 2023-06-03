@@ -11,11 +11,11 @@
        
         <div  class="upper">
             
-        <img @fade *ngIf="myData.current.temp_c > 25" src="../assets/backgr_hi.svg" >
+        <img @fade *ngIf="myData.current.temp_c >= 25" src="../assets/backgr_hi.svg" >
         <img @fade *ngIf="myData.current.temp_c > 15 && myData.current.temp_c < 25" src="../assets/backgr_med_hi.svg" >
-        <img @fade *ngIf="myData.current.temp_c > 5 && myData.current.temp_c < 15 " src="../assets/backgr_med_lo.svg" > 
+        <img @fade *ngIf="myData.current.temp_c >= 5 && myData.current.temp_c < 15 " src="../assets/backgr_med_lo.svg" > 
         <img @fade *ngIf="myData.current.temp_c > -5 && myData.current.temp_c < 5 " src="../assets/backgr_lo.svg"> 
-        <img @fade *ngIf="myData.current.temp_c < -5 "src="../assets/backgr_v_lo.svg">
+        <img @fade *ngIf="myData.current.temp_c <= -5 "src="../assets/backgr_v_lo.svg">
             
           <div  class="weather-data">
             <div class="location">
