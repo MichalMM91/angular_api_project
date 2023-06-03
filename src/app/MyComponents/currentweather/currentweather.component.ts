@@ -3,11 +3,14 @@ import { MyDataService } from 'src/app/MyServices/weather.service';
 import { Weather } from 'src/app/MyClasses/weather';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
+import {TooltipPosition, MatTooltipModule} from '@angular/material/tooltip';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-currentweather',
   templateUrl: './currentweather.component.html',
   styleUrls: ['./currentweather.component.css'],
+ 
   animations: [
     trigger('fade', [
       transition('void => *', [
@@ -15,8 +18,12 @@ import { CommonModule } from '@angular/common';
         animate(2000,  style({backgroundColor: 'white', opacity: 1}))
       ])
     
-  ])]
+  ])],
+  
+  
 })
+
+
 
 export class CurrentweatherComponent implements OnInit {
   myData: any;
