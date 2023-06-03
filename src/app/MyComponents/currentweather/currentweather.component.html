@@ -1,21 +1,11 @@
 
-<!-- <div class="search">
-     <form #form="ngForm" (submit)="onSubmit()">
-        <input type="text" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="submit">Search</button>
-    </form> 
-</div> -->
 
 <div @fade class="wrapper">
     <div class="container">
         <div class="search">
             <form #form="ngForm" (submit)="onSubmit()">
-               <input placeholder="City name" name="city" [(ngModel)]="searchQuery"><button 
-                mat-raised-button
-                matTooltip="Info about the action"
-                aria-label="Button that displays a tooltip when focused or hovered over"
-                type="submit">
-                    Search
-                </button>
+               <input type="email" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="button" class="btn btn-primary">Check current weather</button>
+                
            </form> 
        </div>
        
