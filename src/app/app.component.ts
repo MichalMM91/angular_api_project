@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,7 @@ import { RouterOutlet } from '@angular/router';
 
 })
 export class AppComponent {
-  title = 'MyApiProject';
+  title = 'TripOffice_ApiProject_64262_MM';
+  webmaster = 'Michał Mateusz Maciejewski';
+  index_no = "64262";
 }

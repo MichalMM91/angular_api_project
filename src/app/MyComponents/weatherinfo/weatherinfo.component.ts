@@ -2,10 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { Country } from 'src/app/MyClasses/country';
 import { RestService } from 'src/app/MyServices/rest.service';
 
+import { animate, state, style, transition, trigger } from '@angular/animations';
+
 @Component({
   selector: 'app-weatherinfo',
   templateUrl: './weatherinfo.component.html',
-  styleUrls: ['./weatherinfo.component.css']
+  styleUrls: ['./weatherinfo.component.css'],
+  animations: [
+    trigger('fade', [
+      transition('void => *', [
+        style({backgroundColor: 'white', opacity: 0}),
+        animate(2000,  style({backgroundColor: 'white', opacity: 1}))
+      ])
+    
+  ])]
 })
 export class WeatherinfoComponent implements OnInit {
   

@@ -1,19 +1,25 @@
 
-<div class="search">
+<!-- <div class="search">
      <form #form="ngForm" (submit)="onSubmit()">
         <input type="text" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="submit">Search</button>
     </form> 
-</div>
+</div> -->
 
 <div @fade class="wrapper">
     <div class="container">
+        <div class="search">
+            <form #form="ngForm" (submit)="onSubmit()">
+               <input type="text" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="submit">Search</button>
+           </form> 
+       </div>
+       
         <div  class="upper">
-        
-        <img *ngIf="myData.current.temp_c > 25" src="../assets/backgr_hi.svg" >
-        <img *ngIf="myData.current.temp_c > 15 && myData.current.temp_c < 25" src="../assets/backgr_med_hi.svg" >
-        <img *ngIf="myData.current.temp_c > 5 && myData.current.temp_c < 15 " src="../assets/backgr_med_lo.svg" > 
-        <img  *ngIf="myData.current.temp_c > -5 && myData.current.temp_c < 5 " src="../assets/backgr_lo.svg"> 
-        <img  *ngIf="myData.current.temp_c < -5 "src="../assets/backgr_v_lo.svg">
+            
+        <img @fade *ngIf="myData.current.temp_c > 25" src="../assets/backgr_hi.svg" >
+        <img @fade *ngIf="myData.current.temp_c > 15 && myData.current.temp_c < 25" src="../assets/backgr_med_hi.svg" >
+        <img @fade *ngIf="myData.current.temp_c > 5 && myData.current.temp_c < 15 " src="../assets/backgr_med_lo.svg" > 
+        <img @fade *ngIf="myData.current.temp_c > -5 && myData.current.temp_c < 5 " src="../assets/backgr_lo.svg"> 
+        <img @fade *ngIf="myData.current.temp_c < -5 "src="../assets/backgr_v_lo.svg">
             
           <div  class="weather-data">
             <div class="location">
@@ -29,8 +35,9 @@
         <div class="lower">
 
             <div class="more-info-label"></div>
-            <div class="more-info-container">
-                <div class="info-block">
+            <div class="more-info-container ">
+                
+                <div class="info-block ">
                     <div class="info-block-label">
                         <img src="../assets/min.jpg">
                         <span>PERCEIVED</span>
@@ -39,7 +46,8 @@
                         {{myData.current.feelslike_c}}°C
                     </div>
                 </div>
-                <div class="info-block">
+
+                <div class="info-block ">
                     <div class="info-block-label">
                         <!-- <img src="../assets/max.jpg"> -->
                         <!-- <i class="fa-solid fa-location-arrow fa-spin"></i>
@@ -51,7 +59,8 @@
                         {{myData.current.wind_dir}}
                     </div>
                 </div>
-                <div class="info-block">
+
+                <div class="info-block ">
                     <div class="info-block-label">
                         <img src="../assets/humidity.jpg">
                         <span>HUMIDITY</span>
@@ -60,7 +69,8 @@
                         {{myData.current.humidity}}%
                     </div>
                 </div>
-                <div class="info-block">
+
+                <div class="info-block ">
                     <div class="info-block-label">
                         <img src="../assets/wind.jpg">
                         <span>WIND SPEED</span>
