@@ -15,6 +15,7 @@ import { CurrentweatherComponent } from './MyComponents/currentweather/currentwe
 import { AboutComponent } from './MyComponents/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './MyComponents/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
     WeatherinfoComponent,
     CurrentweatherComponent,
     AboutComponent,
+    FooterComponent,
 
 
   ],
