@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MyDataService } from 'src/app/MyServices/weather.service';
 import { Weather } from 'src/app/MyClasses/weather';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-currentweather',
