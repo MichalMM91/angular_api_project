@@ -4,7 +4,7 @@
     <div class="container">
         <div class="search">
             <form #form="ngForm" (submit)="onSubmit()">
-               <input type="email" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="button" class="btn btn-primary">Check current weather</button>
+               <input type="email" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="button" class="btn btn-primary" data-toggle="tooltip" title="Click to chceck weather">Check current weather</button>
                 
            </form> 
        </div>
