@@ -6,15 +6,22 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 // dekorator, wstrzyknięcie zależności
-export class WeatherService {
+export class MyDataService {
 
-  constructor(private http:HttpClient ) { }
+  constructor(private http: HttpClient ) {
 
-  public getJson(url:string):Observable<any>{
-    return this.http.get(url);
-    // wzorzec obserwatora
+   }
+
+   getData(url:string){
+    return this.http.get(url)
+   }
+
+
+  // public getJson(url:string):Observable<any>{
+  //   return this.http.get(url);
+  //   // wzorzec obserwatora
   }
 
 
-}
+//}
 //kursy walut, pogoda, kraje, giełda - różne rest api

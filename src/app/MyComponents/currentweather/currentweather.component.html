@@ -1,23 +1,30 @@
+
 <div class="search">
-    <form #form="ngForm" (submit)="onSubmit()">
+     <form #form="ngForm" (submit)="onSubmit()">
         <input type="text" placeholder="City name" name="city" [(ngModel)]="searchQuery"><button type="submit">Search</button>
-    </form>
+    </form> 
 </div>
+
 <div class="wrapper">
     <div class="container">
         <div class="upper">
-          <img src="../assets/backgr_hi.svg" *ngIf="14 > 25 ">
-          <img src="../assets/backgr_med_hi.svg" *ngIf="14 > 15 AND 14 < 25"> 
-          <img src="../assets/backgr_med_lo.svg" *ngIf="14 > 5 AND 14 < 15 "> 
-          <img src="../assets/backgr_lo.svg" *ngIf="14 > 5 AND 14 < 5 "> 
-          <img src="../assets/backgr_v_lo.svg" *ngIf="14 < -5 "> 
-          
+        <!-- <img *ngIf="myData.current.temp_c > 25" src="../assets/backgr_hi.svg" >
+         <img *ngIf="myData.current.temp_c > 15 AND myData.current.temp_c < 25" src="../assets/backgr_med_hi.svg" > 
+         <img *ngIf="myData.current.temp_c > 5 AND myData.current.temp_c < 15 " src="../assets/backgr_med_lo.svg" > 
+          <img  *ngIf="myData.current.temp_c > -5 AND myData.current.temp_c < 5 " src="../assets/backgr_lo.svg"> 
+          <img  *ngIf="myData.current.temp_c < -5 "src="../assets/backgr_v_lo.svg"> 
+           -->
+           <img *ngIf="myData.current.temp_c > 25" src="./assets/backgr_hi.svg" >
+            <img *ngIf="myData.current.temp_c > 15 AND myData.current.temp_c < 25" src="./assets/backgr_med_hi.svg" >
+           <!-- <img *ngIf="myData.current.temp_c > 5 AND myData.current.temp_c < 15 " src="../assets/backgr_med_lo.svg" > 
+            <img  *ngIf="myData.current.temp_c > -5 AND myData.current.temp_c < 5 " src="../assets/backgr_lo.svg"> 
+            <img  *ngIf="myData.current.temp_c < -5 "src="../assets/backgr_v_lo.svg">  -->
+            
           <div class="weather-data">
             <div class="location">
-                London
-
+                {{myData.location.name}}
             </div>
-            <div class="temperature">{{24.40 | number: '1.0-0'}}°C
+            <div class="temperature">{{myData.current.temp_c | number: '1.0-0'}}°C
             </div>
         
        
@@ -30,19 +37,21 @@
                 <div class="info-block">
                     <div class="info-block-label">
                         <img src="../assets/min.jpg">
-                        <span>MIN</span>
+                        <span>PERCEIVED</span>
                     </div>
                     <div class="info-block-value">
-                        10°C
+                        {{myData.current.feelslike_c}}°C
                     </div>
                 </div>
                 <div class="info-block">
                     <div class="info-block-label">
                         <img src="../assets/max.jpg">
-                        <span>MAX</span>
+                        <i class="fa-solid fa-location-arrow fa-spin"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                        <span>WIND DIRECTION</span>
                     </div>
                     <div class="info-block-value">
-                        20°C
+                        {{myData.current.wind_dir}}
                     </div>
                 </div>
                 <div class="info-block">
@@ -51,16 +60,16 @@
                         <span>HUMIDITY</span>
                     </div>
                     <div class="info-block-value">
-                        10%
+                        {{myData.current.humidity}}%
                     </div>
                 </div>
                 <div class="info-block">
                     <div class="info-block-label">
                         <img src="../assets/wind.jpg">
-                        <span>min</span>
+                        <span>WIND SPEED</span>
                     </div>
                     <div class="info-block-value">
-                        20 km/h
+                        {{myData.current.wind_kph}} km/h
                     </div>
                 </div>
             </div>
