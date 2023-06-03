@@ -13,7 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { CurrentweatherComponent } from './MyComponents/currentweather/currentweather.component';
 import { AboutComponent } from './MyComponents/about/about.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { AboutComponent } from './MyComponents/about/about.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@
     </form> 
 </div>
 
-<div class="wrapper">
+<div @fade class="wrapper">
     <div class="container">
         <div class="upper">
         <!-- <img *ngIf="myData.current.temp_c > 25" src="../assets/backgr_hi.svg" >
@@ -14,14 +14,15 @@
           <img  *ngIf="myData.current.temp_c > -5 AND myData.current.temp_c < 5 " src="../assets/backgr_lo.svg"> 
           <img  *ngIf="myData.current.temp_c < -5 "src="../assets/backgr_v_lo.svg"> 
            -->
-           <img *ngIf="myData.current.temp_c > 25" src="./assets/backgr_hi.svg" >
-            <img *ngIf="myData.current.temp_c > 15 AND myData.current.temp_c < 25" src="./assets/backgr_med_hi.svg" >
+        <img *ngIf="myData.current.temp_c > 25" src="../assets/backgr_hi.svg" >
+        <img *ngIf="myData.current.temp_c > 15 AND myData.current.temp_c < 25" src="../assets/backgr_med_hi.svg" >
            <!-- <img *ngIf="myData.current.temp_c > 5 AND myData.current.temp_c < 15 " src="../assets/backgr_med_lo.svg" > 
             <img  *ngIf="myData.current.temp_c > -5 AND myData.current.temp_c < 5 " src="../assets/backgr_lo.svg"> 
             <img  *ngIf="myData.current.temp_c < -5 "src="../assets/backgr_v_lo.svg">  -->
             
-          <div class="weather-data">
+          <div  class="weather-data">
             <div class="location">
+                
                 {{myData.location.name}}
             </div>
             <div class="temperature">{{myData.current.temp_c | number: '1.0-0'}}°C
@@ -39,15 +40,16 @@
                         <img src="../assets/min.jpg">
                         <span>PERCEIVED</span>
                     </div>
-                    <div class="info-block-value">
+                    <div  class="info-block-value">
                         {{myData.current.feelslike_c}}°C
                     </div>
                 </div>
                 <div class="info-block">
                     <div class="info-block-label">
-                        <img src="../assets/max.jpg">
-                        <i class="fa-solid fa-location-arrow fa-spin"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+                        <!-- <img src="../assets/max.jpg"> -->
+                        <!-- <i class="fa-solid fa-location-arrow fa-spin"></i>
+                        <i class="fa-duotone fa-arrow-left fa-spin"></i> -->
+                        <i class="fa fa-solid fa-location-arrow fa-spin fa-3x fa-fw" style="color: #c29d38;"></i>
                         <span>WIND DIRECTION</span>
                     </div>
                     <div class="info-block-value">

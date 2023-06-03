@@ -14,6 +14,7 @@ export class MyDataService {
 
    getData(url:string){
     return this.http.get(url)
+    
    }
 
 
